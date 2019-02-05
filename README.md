@@ -12,6 +12,8 @@ Untuk melakukan instalasi Laravel melalui Composer, install terlebih dahulu Comp
 Masuk ke folder htdocs yang akan dijadikan folder untuk program laravel, lalu tekan Shift + Klik Kanan pada sembarang tempat, pilih Open command windows here untuk membuk command prompt pada folder htdocs.
 Ketik composer create-project --prefer-dist laravel/laravel belajarLaravel "5.7.*"
 Proses instalasi Laravel akan berlangsung. Pastikan perangkat yang akan dijadikan media koding laravel terkoneksi dengan internet karena composer akan mengambil package-package laravel nya secara online. Laravel akan di install pada folder belajarLaravel. 
+
+
 2. Integrasi Laravel dengan Template
 Untuk dapat menerapkan template pada laravel contohnya dalam program laravel ini menggunakan template admin lte maka bisa di unduh pada link https://codeload.github.com/almasaeed2010/AdminLTE/zip/v2.3.11
 Buat folder assets di folder public laravel. Copy folder dist, bootstrap dan plugins  dari template AdminLTE ke folder tersebut.                                                                                                                                                Buat folder baru dengan nama templates pada folder resources/views
@@ -30,6 +32,7 @@ Membuat Tabel dengan Migration
 4. Buka file create_table_kelas.php lalu masukan sintaks yang akan dibutuhkan
 Buka kembali command and prompt lalu klik > php artisan migrate
 
+
 3. Menampilkan data di views 
 Setelah database, tabel dan data sudah dibuat, sekarang buat tampilan dalam bentuk tabel untuk menampilkan data-data tersebut di web yang akan dibuat. 
 Ikuti langkah berikut: 1. Buka command prompt, ketik sintaks berikut untuk membuat Model 
@@ -37,6 +40,8 @@ Ikuti langkah berikut: 1. Buka command prompt, ketik sintaks berikut untuk membu
 2.Buka file app/Kelas.php kemudian input sintaks yang dibutuhkan
 3.Buka file app/Http/Controllers/KelasController.php, kemudian modifikasi sintaks tersebut
 4.Buka file resources/views/kelas/index.blade.php, kemudian modifikasi sintaks sintaks dalam file tersebut
+
+
 
 4. Integrasi CRUD – Create Data 
 Pada pembahasan kali ini akan dijelaskan tentang bagaimana untuk menginput data kedalam database dengan Laravel Eloquent. 

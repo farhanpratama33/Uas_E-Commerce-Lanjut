@@ -5,7 +5,7 @@ Fungsi web program untuk mengatur data seperti data siswa kelas dll seperti fung
 
 
 Step by step penyusunan crud laravel
-1.Instalasi media pemrograman laravel
+A.Instalasi media pemrograman laravel
 Menginstall Dan Konfigurasi sublime text sebagai media untuk menyusun dan membuat struktur program yang akan dibuat 
 Menginstall Dan Konfigurasi Xampp sebagai database server local pada komputer yang akan dijadikan media untuk menyusun program dengan framework laravel.
 Untuk melakukan instalasi Laravel melalui Composer, install terlebih dahulu Composer, bisa didapatkan dari https://getcomposer.org/Composer-Setup.exe
@@ -14,7 +14,7 @@ Ketik composer create-project --prefer-dist laravel/laravel belajarLaravel "5.7.
 Proses instalasi Laravel akan berlangsung. Pastikan perangkat yang akan dijadikan media koding laravel terkoneksi dengan internet karena composer akan mengambil package-package laravel nya secara online. Laravel akan di install pada folder belajarLaravel. 
 
 
-2. Integrasi Laravel dengan Template
+B. Integrasi Laravel dengan Template
 Untuk dapat menerapkan template pada laravel contohnya dalam program laravel ini menggunakan template admin lte maka bisa di unduh pada link https://codeload.github.com/almasaeed2010/AdminLTE/zip/v2.3.11
 Buat folder assets di folder public laravel. Copy folder dist, bootstrap dan plugins  dari template AdminLTE ke folder tersebut.                                                                                                                                                Buat folder baru dengan nama templates pada folder resources/views
 Didalam folder templates, buat 2 file dengan nama header.blade.php dan footer.blade.php
@@ -33,7 +33,7 @@ Membuat Tabel dengan Migration
 Buka kembali command and prompt lalu klik > php artisan migrate
 
 
-3. Menampilkan data di views 
+C. Menampilkan data di views 
 Setelah database, tabel dan data sudah dibuat, sekarang buat tampilan dalam bentuk tabel untuk menampilkan data-data tersebut di web yang akan dibuat. 
 Ikuti langkah berikut: 1. Buka command prompt, ketik sintaks berikut untuk membuat Model 
 > php artisan make:model Kelas	
@@ -43,7 +43,7 @@ Ikuti langkah berikut: 1. Buka command prompt, ketik sintaks berikut untuk membu
 
 
 
-4. Integrasi CRUD – Create Data 
+D. Integrasi CRUD – Create Data 
 Pada pembahasan kali ini akan dijelaskan tentang bagaimana untuk menginput data kedalam database dengan Laravel Eloquent. 
 Ikuti langkah-langkah berikut ini: 
 1. Buat file baru di resources/views/kelas/form.blade.php (Copy dari index.blade.php).
@@ -68,11 +68,10 @@ Ikuti langkah-langkah berikut ini:
 4. Buka file routes/web.php, tambahkan sintaks yang akan dibutuhkan
 Route::get('kelas/add', 'KelasController@create');
 Route::post('kelas/add', 'KelasController@store');
-5. Integrasi CRUD – Updating Data 
+
+E. Integrasi CRUD – Updating Data 
 Setelah berhasil melakukan langkah-langkah diatas, lalu mencoba untuk melakukan editing data. Form yang digunakan masih sama dengan form yang dipakai untuk melakukan input data, hanya saja menambahkan logika untuk melakukan cek apabila terdapat data $result, maka artinya form tersebut dalam mode Edit, jika tidak terdapat data, maka form tersebut dalam mode Input. 
 1. Buka file resources/views/kelas/form.blade.php, lakukan modifikasi dengan sintaks sintaks yang akan dibutuhkan
-
-
 
 2 Buka file app/Http/Controllers/KelasController.php, tambahkan sintaks untuk fungsi edit dan update: 
 public function edit($id)
@@ -99,7 +98,8 @@ public function edit($id)
 3. Buka file routes/web.php, tambahkan sintaks yang akan dibutuhkan
 Route::get('siswa/{id}/edit', 'SiswaController@edit');
 Route::patch('siswa/{id}/edit', 'SiswaController@update');
-5. Integrasi CRUD – Delete Data  
+
+F. Integrasi CRUD – Delete Data  
 Pada bagian ini akan dijelaskan langkah-langkah untuk menghapus data, pada tahap sebelumnya sudah membuat tombol untuk hapus dengan menggunakan form dan method field DELETE. Ikuti langkah-langkah berikut ini:
  1. Buka file app/Http/Controllers/KelasController.php, tambahkan sintaks untuk fungsi destroy
  public function destroy(Request $equest, $id)
